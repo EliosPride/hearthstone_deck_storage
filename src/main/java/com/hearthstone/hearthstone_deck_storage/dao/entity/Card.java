@@ -14,7 +14,7 @@ public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String cardId;
+    private Long cardId;
     private int classId;
     private int cardTypeId;
     private int rarityId;
@@ -23,9 +23,8 @@ public class Card {
     private int attack;
     private int manaCost;
     private String name;
-    @Column(name = "ability")
     private String text;
-    private String image;
+    private String imageUrl;
     private String imageGold;
     private String flavorText;
 }
