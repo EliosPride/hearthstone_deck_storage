@@ -1,0 +1,27 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1" author="Pallant">
+        <createTable tableName="cards">
+            <column name="id" autoIncrement="true" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="cardId" type="BIGINT"/>
+            <column name="classId" type="INT"/>
+            <column name="cardTypeId" type="INT"/>
+            <column name="rarityId" type="INT"/>
+            <column name="artistName" type="VARCHAR(255)"/>
+            <column name="health" type="INT"/>
+            <column name="attack" type="INT"/>
+            <column name="manaCost" type="INT"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="text" type="VARCHAR(255)"/>
+            <column name="imageUrl" type="VARCHAR(255)"/>
+            <column name="imageGold" type="VARCHAR(255)"/>
+            <column name="flavorText" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
