@@ -16,7 +16,6 @@ public class Card {
     private Long id;
     private Long cardId;
     private int classId;
-    private int cardTypeId;
     private int rarityId;
     private String artistName;
     private int health;
@@ -25,6 +24,5 @@ public class Card {
     private String name;
     private String text;
     private String imageUrl;
-    private String imageGold;
     private String flavorText;
 }
