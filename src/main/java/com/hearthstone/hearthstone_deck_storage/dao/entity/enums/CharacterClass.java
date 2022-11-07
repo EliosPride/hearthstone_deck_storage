@@ -1,5 +1,7 @@
 package com.hearthstone.hearthstone_deck_storage.dao.entity.enums;
 
+import java.util.Objects;
+
 public enum CharacterClass {
     DEMONHUNTER(1),
     DRUID(2),
@@ -13,7 +15,7 @@ public enum CharacterClass {
     WARRIOR(10),
     NEUTRAL(12);
 
-    private final int classId;
+    public final int classId;
 
     CharacterClass(int classId) {
         this.classId = classId;
@@ -21,5 +23,12 @@ public enum CharacterClass {
 
     public int getClassId() {
         return classId;
+    }
+
+    public static CharacterClass fromValue(Integer id) {
+        for (CharacterClass clazz: values()) {
+            if (Objects.equals(id, clazz.getClassId())) {return clazz;}
+        }
+        return null;
     }
 }

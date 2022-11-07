@@ -8,17 +8,17 @@
             <column name="id" autoIncrement="true" type="BIGINT">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="card_Id" type="BIGINT"/>
-            <column name="class_Id" type="INT"/>
-            <column name="rarity_Id" type="INT"/>
-            <column name="artist_Name" type="VARCHAR(255)"/>
+            <column name="card_id" type="BIGINT"/>
+            <column name="class_id" type="tinyint"/>
+            <column name="rarity_id" type="tinyint"/>
+            <column name="artist_name" type="VARCHAR(255)"/>
             <column name="health" type="INT"/>
             <column name="attack" type="INT"/>
-            <column name="mana_Cost" type="INT"/>
+            <column name="mana_cost" type="INT"/>
             <column name="name" type="VARCHAR(255)"/>
             <column name="text" type="VARCHAR(255)"/>
-            <column name="image_Url" type="VARCHAR(255)"/>
-            <column name="flavor_Text" type="VARCHAR(255)"/>
+            <column name="image_url" type="VARCHAR(255)"/>
+            <column name="flavor_text" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
 

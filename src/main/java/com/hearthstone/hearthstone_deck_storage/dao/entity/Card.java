@@ -1,5 +1,9 @@
 package com.hearthstone.hearthstone_deck_storage.dao.entity;
 
+import com.hearthstone.hearthstone_deck_storage.common.config.converter.CharacterClassConverter;
+import com.hearthstone.hearthstone_deck_storage.common.config.converter.RarityConverter;
+import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.CharacterClass;
+import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.Rarity;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -15,8 +19,12 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long cardId;
-    private int classId;
-    private int rarityId;
+    @Convert(converter = CharacterClassConverter.class)
+    @Column(name = "classId")
+    private CharacterClass clazz;
+    @Convert(converter = RarityConverter.class)
+    @Column(name = "rarityId")
+    private Rarity rarity;
     private String artistName;
     private int health;
     private int attack;
