@@ -8,7 +8,7 @@ public enum Rarity {
     EPIC(4),
     LEGENDARY(5);
 
-    public final int rarityId;
+    private final int rarityId;
 
     Rarity(int rarityId) {
         this.rarityId = rarityId;
@@ -19,8 +19,10 @@ public enum Rarity {
     }
 
     public static Rarity fromValue(Integer id) {
-        for (Rarity clazz: values()) {
-            if (Objects.equals(id, clazz.getRarityId())) {return clazz;}
+        for (Rarity rarity : values()) {
+            if (Objects.equals(id, rarity.getRarityId())) {
+                return rarity;
+            }
         }
         return null;
     }

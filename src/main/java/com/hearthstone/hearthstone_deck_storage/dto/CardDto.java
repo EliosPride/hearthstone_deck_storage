@@ -6,7 +6,9 @@ import lombok.Data;
 
 @Data
 public class CardDto {
-    private CharacterClass clazz;
+    private Long id;
+    private Long cardId;
+    private CharacterClass characterClass;
     private Rarity rarity;
     private String artistName;
     private int health;

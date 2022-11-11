@@ -15,7 +15,7 @@ public enum CharacterClass {
     WARRIOR(10),
     NEUTRAL(12);
 
-    public final int classId;
+    private final int classId;
 
     CharacterClass(int classId) {
         this.classId = classId;
@@ -26,8 +26,10 @@ public enum CharacterClass {
     }
 
     public static CharacterClass fromValue(Integer id) {
-        for (CharacterClass clazz: values()) {
-            if (Objects.equals(id, clazz.getClassId())) {return clazz;}
+        for (CharacterClass characterClass : values()) {
+            if (Objects.equals(id, characterClass.getClassId())) {
+                return characterClass;
+            }
         }
         return null;
     }

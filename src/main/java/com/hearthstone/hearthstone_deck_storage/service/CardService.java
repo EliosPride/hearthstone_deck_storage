@@ -17,5 +17,5 @@ public interface CardService {
 
     void delete(CardDto cardDto);
 
-    void deleteAll(List<CardDto> cardDtoList);
+    void deleteAll();
 }

@@ -5,12 +5,10 @@ import com.hearthstone.hearthstone_deck_storage.common.config.converter.RarityCo
 import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.CharacterClass;
 import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.Rarity;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
-@RequiredArgsConstructor
 @Entity
 @Table(name = "cards")
 public class Card {
@@ -20,10 +18,10 @@ public class Card {
     private Long id;
     private Long cardId;
     @Convert(converter = CharacterClassConverter.class)
-    @Column(name = "classId")
-    private CharacterClass clazz;
+    @Column(name = "class_Id")
+    private CharacterClass characterClass;
     @Convert(converter = RarityConverter.class)
-    @Column(name = "rarityId")
+    @Column(name = "rarity_Id")
     private Rarity rarity;
     private String artistName;
     private int health;
