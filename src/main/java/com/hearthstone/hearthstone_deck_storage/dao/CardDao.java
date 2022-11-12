@@ -4,6 +4,7 @@ import com.hearthstone.hearthstone_deck_storage.dao.entity.Card;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CardDao extends CrudRepository<Card, Long>  {
 
@@ -13,4 +14,5 @@ public interface CardDao extends CrudRepository<Card, Long>  {
     @Override
     <S extends Card> List<S> saveAll(Iterable<S> entities);
 
+    Optional<Card> findCardByCardId(Long aLong);
 }

@@ -26,7 +26,7 @@ public class CardServiceImpl implements CardService {
     @Override
     @Transactional
     public CardDto getOrSave(@NotNull CardDto cardDto) {
-        return cardDao.findById(cardDto.getCardId()).map(this::convertToDto).orElseGet(() -> {
+        return cardDao.findCardByCardId(cardDto.getCardId()).map(this::convertToDto).orElseGet(() -> {
             log.info("Saving card " + cardDto.getFlavorText());
             Card card = modelMapper.map(cardDto, Card.class);
             Card savedCard = cardDao.save(card);
@@ -63,7 +63,7 @@ public class CardServiceImpl implements CardService {
     @Transactional
     public void delete(@NotNull CardDto cardDto) {
         cardDao.delete(modelMapper.map(cardDto, Card.class));
-        log.info("Delete card " + cardDto.getCardId());
+        log.info("Delete card with cardId " + cardDto.getCardId());
     }
 
     @Override

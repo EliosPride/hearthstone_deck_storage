@@ -11,14 +11,14 @@
             <column name="card_id" type="BIGINT"/>
             <column name="class_id" type="tinyint"/>
             <column name="rarity_id" type="tinyint"/>
-            <column name="artist_name" type="VARCHAR(1024)"/>
+            <column name="artist_name" type="VARCHAR(255)"/>
             <column name="health" type="INT"/>
             <column name="attack" type="INT"/>
             <column name="mana_cost" type="INT"/>
-            <column name="name" type="VARCHAR(1024)"/>
-            <column name="text" type="VARCHAR(1024)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="text" type="VARCHAR(255)"/>
             <column name="image_url" type="VARCHAR(1024)"/>
-            <column name="flavor_text" type="VARCHAR(1024)"/>
+            <column name="flavor_text" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
 
