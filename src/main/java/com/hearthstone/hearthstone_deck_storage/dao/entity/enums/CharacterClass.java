@@ -15,19 +15,19 @@ public enum CharacterClass {
     WARRIOR(10),
     NEUTRAL(12);
 
-    private final int classId;
+    private final int value;
 
-    CharacterClass(int classId) {
-        this.classId = classId;
+    CharacterClass(int value) {
+        this.value = value;
     }
 
-    public int getClassId() {
-        return classId;
+    public int getValue() {
+        return value;
     }
 
     public static CharacterClass fromValue(Integer id) {
         for (CharacterClass characterClass : values()) {
-            if (Objects.equals(id, characterClass.getClassId())) {
+            if (Objects.equals(id, characterClass.getValue())) {
                 return characterClass;
             }
         }

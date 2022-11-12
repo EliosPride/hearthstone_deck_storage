@@ -12,7 +12,7 @@ public class CharacterClassConverter implements AttributeConverter<CharacterClas
         if (attribute == null) {
             return null;
         }
-        return attribute.getClassId();
+        return attribute.getValue();
     }
 
     @Override

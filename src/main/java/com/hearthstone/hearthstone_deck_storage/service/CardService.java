@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface CardService {
 
-    CardDto save(CardDto cardDto);
+    CardDto getOrSave(CardDto cardDto);
 
     List<CardDto> saveAll(List<CardDto> cardDtoList);
 

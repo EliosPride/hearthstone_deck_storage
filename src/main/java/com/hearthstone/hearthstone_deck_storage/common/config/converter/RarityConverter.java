@@ -12,7 +12,7 @@ public class RarityConverter implements AttributeConverter<Rarity, Integer> {
         if (attribute == null) {
             return null;
         }
-        return attribute.getRarityId();
+        return attribute.getValue();
     }
 
     @Override
