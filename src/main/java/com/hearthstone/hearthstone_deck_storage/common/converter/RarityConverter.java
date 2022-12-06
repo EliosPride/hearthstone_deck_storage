@@ -1,4 +1,4 @@
-package com.hearthstone.hearthstone_deck_storage.common.config.converter;
+package com.hearthstone.hearthstone_deck_storage.common.converter;
 
 import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.Rarity;
 
@@ -16,10 +16,10 @@ public class RarityConverter implements AttributeConverter<Rarity, Integer> {
     }
 
     @Override
-    public Rarity convertToEntityAttribute(Integer dbData) {
-        if (dbData == null) {
+    public Rarity convertToEntityAttribute(Integer value) {
+        if (value == null) {
             return null;
         }
-        return Rarity.fromValue(dbData);
+        return Rarity.fromValue(value);
     }
 }

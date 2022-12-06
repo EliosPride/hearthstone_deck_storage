@@ -1,4 +1,4 @@
-package com.hearthstone.hearthstone_deck_storage.common.config.converter;
+package com.hearthstone.hearthstone_deck_storage.common.converter;
 
 import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.CharacterClass;
 

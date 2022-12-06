@@ -1,5 +1,8 @@
 package com.hearthstone.hearthstone_deck_storage.dao.entity.enums;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import java.util.Objects;
 
 public enum CharacterClass {
@@ -25,6 +28,12 @@ public enum CharacterClass {
         return value;
     }
 
+    @JsonValue
+    public int valueToJson() {
+        return value;
+    }
+
+    @JsonCreator
     public static CharacterClass fromValue(Integer id) {
         for (CharacterClass characterClass : values()) {
             if (Objects.equals(id, characterClass.getValue())) {
