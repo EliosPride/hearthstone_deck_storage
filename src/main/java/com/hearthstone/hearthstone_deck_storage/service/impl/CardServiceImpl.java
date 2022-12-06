@@ -42,7 +42,7 @@ public class CardServiceImpl implements CardService {
                 .collect(Collectors.toList());
         return cardDao.saveAll(cardList).stream()
                 .map(this::convertToDto)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
@@ -56,7 +56,7 @@ public class CardServiceImpl implements CardService {
     public List<CardDto> findAll() {
         return cardDao.findAll().stream()
                 .map(this::convertToDto)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override

@@ -1,5 +1,8 @@
 package com.hearthstone.hearthstone_deck_storage.dao.entity.enums;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import java.util.Objects;
 
 public enum Rarity {
@@ -18,6 +21,12 @@ public enum Rarity {
         return value;
     }
 
+    @JsonValue
+    public int valueToJson() {
+        return value;
+    }
+
+    @JsonCreator
     public static Rarity fromValue(Integer id) {
         for (Rarity rarity : values()) {
             if (Objects.equals(id, rarity.getValue())) {

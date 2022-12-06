@@ -1,7 +1,7 @@
 package com.hearthstone.hearthstone_deck_storage.dao.entity;
 
-import com.hearthstone.hearthstone_deck_storage.common.config.converter.CharacterClassConverter;
-import com.hearthstone.hearthstone_deck_storage.common.config.converter.RarityConverter;
+import com.hearthstone.hearthstone_deck_storage.common.converter.CharacterClassConverter;
+import com.hearthstone.hearthstone_deck_storage.common.converter.RarityConverter;
 import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.CharacterClass;
 import com.hearthstone.hearthstone_deck_storage.dao.entity.enums.Rarity;
 import lombok.Data;

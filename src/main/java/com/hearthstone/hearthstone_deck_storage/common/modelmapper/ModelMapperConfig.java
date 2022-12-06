@@ -1,4 +1,4 @@
-package com.hearthstone.hearthstone_deck_storage.common.config.modelmapper;
+package com.hearthstone.hearthstone_deck_storage.common.modelmapper;
 
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
